@@ -1,0 +1,111 @@
+.container
+{
+  max-width:1250px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0rem 2rem;
+  position: relative;
+}
+
+.container-level2
+{
+  max-width:1050px;
+  padding: 0rem 4rem;
+  margin: 0 auto;
+}
+
+.d-block
+{
+  display: block;
+}
+
+.d-inlin-block
+{
+  display: inline-block;
+}
+
+//-----------------------Colors
+.c-white
+{
+  color: #fff;
+}
+
+.c-primary
+{
+  color: $primary-color;
+}
+
+.c-secondary
+{
+  color: $secondary-color;
+}
+
+.c-gray{
+  color: $gray;
+}
+//-----------------------Text transform
+.t-uppercase
+{
+  text-transform: uppercase;
+}
+
+.t-cappitalize
+{
+  text-transform: capitalize;
+}
+
+//------------------------Text aligning
+
+.text-center
+{
+  text-align: center;
+}
+
+.text-left
+{
+  text-align: left;
+}
+
+.text-right
+{
+  text-align: right;
+}
+
+//------------------------Fonts weight
+
+.fw-l
+{
+  font-weight: $fw-l;
+}
+
+.fw-n
+{
+  font-weight: $fw-n;
+}
+
+.fw-m
+{
+  font-weight: $fw-m;
+}
+
+.fw-b
+{
+  font-weight: $fw-b;
+}
+
+.fw-xb
+{
+  font-weight: $fw-xb;
+}
+
+/*-------------------------Overflow Hidden------------------------*/
+
+.overflow-y-0
+{
+  overflow-y: hidden;
+}
+
+.overflow-x-0
+{
+  overflow-x: hidden;
+}

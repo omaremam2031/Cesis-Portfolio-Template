@@ -1,0 +1,125 @@
+.services-hero
+{
+  height: fit-content;
+  @include set-bg($url:"/img/about-testimonials.jpg",$rgba1:rgba(129, 14, 158, 0.6),$rgba2:rgba(134, 13, 145, 0.6),$attach:fixed);
+}
+
+.service-img-gallery
+{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  padding: 5rem 0;
+  // grid-template-columns: repeat(8,1fr);
+  grid-gap: 0.8rem;
+  .grid
+  {
+    img{
+      @include img-fit;
+    }
+  }
+
+  .grid1
+  {
+    grid-column: 1/3;
+    grid-row: 1/5;
+  }
+
+  .grid4
+  {
+    grid-column: 3/5;
+    grid-row: 2/5;
+  }
+
+  .grid5
+  {
+    grid-column: 1/3;
+    grid-row: 5/7;
+  }
+
+  .grid6
+  {
+    grid-column: 3/4;
+    grid-row: 5/7;
+  }
+
+  .grid11
+  {
+    grid-column: 3/5;
+    grid-row: 7/8;
+  }
+
+}
+
+.services-content 
+{
+  .featured-project-list
+  {
+    .featured-project-link{
+      
+      display: block;
+      color: $gray;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+      @include bazier-transition;
+
+      &:hover
+      {
+        color: $secondary-color;
+      }
+
+    }
+  }
+}
+
+/*---------------------------------------Wide Screens----------------------------------------*/
+
+// Large screen
+
+@include mediaLg
+{
+  .sc-grid
+  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
+  }
+
+  .sc-grid2
+  {
+    padding-top: 3.5rem;
+
+    .sc-right-bg
+    {
+      height: 400px;
+      img{
+        @include img-fit;
+      }
+    }
+  }
+}
+
+
+// Large extra screen
+
+@include mediaXLg
+{
+  .sc-grid
+  {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
+  }
+
+  .sc-grid2
+  {
+    padding-top: 3.5rem;
+
+    .sc-right-bg
+    {
+      height: 400px;
+      img{
+        @include img-fit;
+      }
+    }
+  }
+}

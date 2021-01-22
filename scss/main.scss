@@ -1,0 +1,12 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import 'plugins/swiper-vars.scss';
+@import 'plugins/pagination.scss';
+@import 'plugins/swiper.scss';
+@import 'modules/all';
+@import 'partials/all';
+@import 'vendor/normalize';

@@ -1,0 +1,526 @@
+// Styling the hero
+
+.about-hero
+{
+  /*url - rgba1 - rgba2 - attachment type*/
+
+  @include set-bg($url:"/img/about-bg.jpg",$rgba1:rgba(7, 7, 7, 0.9),$rgba2:rgba(7, 7, 7, 0.9),$attach:fixed);
+  height: 100vh;
+
+  .about-hero-container
+  {
+    text-align: center;
+    height: 100% !important;
+    position: relative;
+    @include center-content;
+
+    h1,h4{
+      color: #fff;
+    }
+
+    .down-scroll-btn
+    {
+      position: absolute;
+      bottom: 4%;
+      opacity: 0;
+      -webkit-animation-name: scroll-down-btn ;
+      -moz-animation-name: scroll-down-btn ;
+      -o-animation-name: scroll-down-btn ;
+          animation-name: scroll-down-btn ;
+      -webkit-animation-duration: 0.9s;
+      -moz-animation-duration: 0.9s;
+      -o-animation-duration: 0.9s;
+          animation-duration: 0.9s;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      -o-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+      svg{
+        fill: #fff;
+        width: 17px;
+        height: 17px;
+      }
+    }
+  }
+}
+
+// Styling the intro section
+
+.about-intro
+{
+  .about-intro-grid1
+  {
+    text-align: center;
+    .pin{
+      letter-spacing: 1.5px;
+      position: relative;
+      font-size: 1.2rem;
+      &::after
+      {
+        content: "";
+        background: $secondary-color;
+        width: 20px;
+        height:2px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 1.5rem;
+      }
+
+    }
+  }
+
+  .about-intro-grid2
+  {
+    .about-intro-bg
+    {
+      width: 100%;
+      height: 20em;
+      img{
+        @include img-fit;
+      }
+    }
+
+    figcaption
+    {
+      text-align: center;
+      margin: 1rem 0;
+
+      cite{
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+/*-------------------- Styling the Skills section --------------------*/
+
+.mySkills{
+  background: #f0fafd;
+}
+
+.mySkills-grid
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+
+  .progress-circle
+  {
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    width: 100%;
+    height: 100%;
+
+    h5{
+      color: $gray;
+      margin-top: 1rem;
+    }
+  }
+
+}
+
+.ldBar {
+
+  width: 120px !important;
+  height: 120px !important;
+
+  path.mainline
+  {
+     stroke-width: 3;
+     stroke-linecap: round;
+     transition: 1.5s cubic-bezier(0.86, 0.27, 0.15, 1.01);
+  }
+
+  path.baseline {
+    stroke-width: 0;
+    stroke: #30669c;
+    stroke-linecap: round;
+    filter:url(#custom-shadow);
+  }
+
+  .ldBar-label
+  {
+    color: $primary-color;
+    font-size: 0.8em;
+    font-weight: $fw-n;
+    transition: 0.5s cubic-bezier(0.86, 0.27, 0.15, 1.01);
+  }
+
+  &.ldBar1
+  {
+    path.mainline
+    {
+      stroke: $secondary-color;
+    }
+  }
+
+  &.ldBar2
+  {
+    path.mainline
+    {
+      stroke: $light-blue;
+    }
+  }
+
+  &.ldBar3
+  {
+    path.mainline
+    {
+      stroke: $light-green;
+    }
+  }
+
+  &.ldBar4
+  {
+    path.mainline
+    {
+      stroke: $orange;
+    }
+  }
+
+  &.ldBar5
+  {
+    path.mainline
+    {
+      stroke: $pink;
+    }
+  }
+
+  &.ldBar6
+  {
+    path.mainline
+    {
+      stroke: $gray;
+    }
+  }
+ 
+}
+
+/*-------------------- Styling the Customer section --------------------*/
+
+.customer
+{
+  .customer-header
+  {
+    text-align: center;
+  }
+
+  .swiper-slide
+  { 
+    position: relative;
+    figure{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      img{
+        @include img-fit;
+      }
+      &::after
+      {
+        content: "";
+        background: rgba(42, 45, 46,0.4);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    figcaption
+    {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      text-align: center;
+      z-index: 1;
+      h2,h3{
+        font-family: $ff-s;
+        letter-spacing: 1.5px;
+        color: #fff;
+      }
+    }
+  }
+}
+
+/*--------------------Styling about testimonials---------------------*/
+
+.about-testimonials
+{
+  @include set-bg($url:"/img/about-testimonials.jpg",$rgba1:rgba(48, 45, 45, 0.2),$rgba2:rgba(41, 37, 37, 0.2),$attach:scroll);
+
+  h2,h4{
+    color: #fff;
+  }
+
+  .about-swipper-pagination
+  {
+    .swiper-pagination-bullet
+    {
+      background-color: rgb(236, 227, 227);
+
+      &.swiper-pagination-bullet-active
+      {
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+/*--------------------Styling about socail media---------------------*/
+
+.social-media-grid
+{
+  @supports (display:grid)
+  {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 100px 100px;
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+  .sm-grid
+  {
+    border-right: 1px solid rgb(201, 191, 191);
+    border-bottom: 1px solid rgb(201, 191, 191);
+    flex-basis: 33.33%;
+    height: 100px;
+    max-height: 100px !important;
+    a{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    i{
+      font-size: 1.4rem;
+      color: $gray;
+      @include bazier-transition;
+    }
+
+    &:hover i{
+
+      color: $primary-color;
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -o-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+
+  }
+  
+}
+
+/*--------------------------------------------------------WIDE SCREENS------------------------------------------------------------*/
+
+@include mediaLg
+{
+  /*-------------------------about intro section-------------------------------*/
+  .about-intro
+  {
+    
+    .about-intro-grid
+    {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .about-intro-grid1
+    {
+      text-align: left;
+      padding-right: 3.5rem;
+      .pin{
+        position: relative;
+        padding-left: 1rem;
+        &::before
+        {
+          content: "";
+          position: absolute;
+          top: 22%;
+          left: 0;
+          background: $secondary-color;
+          width: 2px;
+          height: 15px;
+        }
+        &::after
+        {
+          display: none;
+        }
+
+      }
+    }
+
+    .about-intro-grid2
+    {
+      .about-intro-bg
+      {
+        height: 26em;
+      }
+
+      figcaption
+      {
+        text-align: right;
+      }
+    }
+  }
+
+  /*-------------------------my skills section-------------------------------*/
+
+  .mySkills
+  {
+    h3{
+      padding: 0 12rem;
+    }
+    .mySkills-grid
+    {
+      grid-template-columns: repeat(3,1fr);
+    }
+
+    .ldBar
+    {
+      width: 150px !important;
+      height: 150px !important;
+    }
+
+  }
+
+   /*-------------------------Customers section-------------------------------*/
+
+   .customer
+  {
+    .customer-header
+    {
+      @supports(display:grid)
+      {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+
+        .ctaButton
+        {
+          justify-self: flex-end;
+        }
+
+      }
+
+      margin-bottom: 2rem;
+      display: flex;
+      .content
+      {
+        text-align: left;
+        flex-basis: 75%;
+      }
+      .ctaButton
+      {
+        flex-basis: 25%;
+      }
+
+    }
+  }
+}
+
+
+@include mediaXLg
+{
+  /*-------------------------about intro section-------------------------------*/
+  .about-intro
+  {
+    .about-intro-grid
+    {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .about-intro-grid1
+    {
+      text-align: left;
+      padding-right: 3.5rem;
+      .pin{
+        position: relative;
+        padding-left: 1rem;
+        &::before
+        {
+          content: "";
+          position: absolute;
+          top: 22%;
+          left: 0;
+          background: $secondary-color;
+          width: 2px;
+          height: 15px;
+        }
+        &::after
+        {
+          display: none;
+        }
+
+      }
+    }
+
+    .about-intro-grid2
+    {
+      .about-intro-bg
+      {
+        height: 26em;
+      }
+
+      figcaption
+      {
+        text-align: right;
+      }
+    }
+  }
+
+  /*-------------------------my skills section-------------------------------*/
+
+  .mySkills
+  {
+    h3{
+      padding: 0 12rem;
+    }
+    .mySkills-grid
+    {
+      grid-template-columns: repeat(3,1fr);
+    }
+
+    .ldBar
+    {
+      width: 150px !important;
+      height: 150px !important;
+    }
+
+  }
+
+   /*-------------------------Customers section-------------------------------*/
+
+   .customer
+  {
+    .customer-header
+    {
+      @supports(display:grid)
+      {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+
+        .ctaButton
+        {
+          justify-self: flex-end;
+        }
+
+      }
+
+      margin-bottom: 2rem;
+      display: flex;
+      .content
+      {
+        text-align: left;
+        flex-basis: 75%;
+      }
+      .ctaButton
+      {
+        flex-basis: 25%;
+      }
+
+    }
+  }
+}

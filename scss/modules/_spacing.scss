@@ -1,0 +1,79 @@
+
+//Container
+
+@mixin container($max-width,$margin) {
+  max-width: $max-width;
+  margin: $margin;
+}
+
+//Spaces array
+
+$space_amount:(0,1,2,3,4,5,6);
+
+@each $space in $space_amount
+{
+
+/*************Margin************/
+
+  //All around margin
+  .m-#{$space}
+  {
+    margin: #{$space}rem !important;
+  }
+
+  //Margin left
+  .ml-#{$space}
+  {
+    margin-left: #{$space}rem !important;
+  }
+
+  //Margin right
+  .mr-#{$space}
+  {
+    margin-right: #{$space}rem !important;
+  }
+
+  //Margin top
+  .mt-#{$space}
+  {
+    margin-top: #{$space}rem !important;
+  }
+
+  //Margin bottom
+  .mb-#{$space}
+  {
+    margin-bottom: #{$space}rem !important;
+  }
+
+/*************Padding************/
+
+  //All around padding
+  .p-#{$space}
+  {
+    padding: #{$space}rem !important;
+  }
+
+  //Margin left
+  .pl-#{$space}
+  {
+    padding-left: #{$space}rem !important;
+  }
+
+  //padding right
+  .pr-#{$space}
+  {
+    padding-right: #{$space}rem !important;
+  }
+
+  //padding top
+  .pt-#{$space}
+  {
+    padding-top: #{$space}rem !important;
+  }
+
+  //padding bottom
+  .pb-#{$space}
+  {
+    padding-bottom: #{$space}rem !important;
+  }
+}

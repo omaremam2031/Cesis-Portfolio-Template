@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+
+    <!-- main style -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- video js link -->
+    <link href="/node_modules/video.js/dist/video-js.css" rel="stylesheet" />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+
+  </head>
+  <body>
+    <div class="transitions">
+      <div class="transition"></div>
+      <div class="transition"></div>
+      <div class="transition"></div>
+    </div>
+    <header>
+      <div class="navigation">
+        <div class="s1 logo">
+          <a href="#">
+            <img
+              class="company_logo"
+              src="img/white-Logo.png"
+              alt="Cesis Creative Logo"
+              title="Cesis Creative Logo"
+            />
+          </a>
+        </div>
+        <button class="humberger btn">
+          <div class="s1">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+          </div>
+        </button>
+        <div class="navbar-container">
+          <ul class="navbar">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link active">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="portfolio.html" class="nav-link">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a href="services.html" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="pageNotFound.html" class="nav-link">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="nav-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="nav-link"><i class="fab fa-dribbble"></i></a>
+              <a href="#" class="nav-link"><i class="fab fa-behance"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- hero section -->
+      <section id="hero" class="hero">
+        <div class="hero-container">
+          <hgroup>
+            <h1 class="s1">I am Cesis</h1>
+            <h3 class="s1 fw-n c-white">Let's make your website great again</h4>
+          </hgroup>
+          <a href="#" class="s1 btn btn-white mt-1">View portfolio</a>
+          <a data-easing="easeInQuad" href="#intro" class="btn down-scroll-btn" id="jumpTo" aria-label="jump to the next section">
+            <svg viewBox="0 0 24 24" class="s1">
+              <path
+                d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"
+              />
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- intro section -->
+      <section id="intro" class="intro mt-4 mb-4">
+        <div class="intro-bg-grid">
+          <div class="intro-content">
+            <h2>Let’s make your design great again</h2>
+            <p>
+              I build identities and experiences to elevate& empower
+              organizations. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos veniam hic deserunt numquam quia consequuntur, quam temporibus repellat expedita neque?
+            </p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, asperiores.</p>
+            <a href="#" class="btn btn-dark mt-2">get in touch</a>
+          </div>
+          <div class="intro-bg">
+            <img
+              srcset="
+                img/intro-bg-4x.jpg 4x,
+                img/intro-bg-3x.jpg 3x,
+                img/intro-bg-2x.jpg 2x
+              "
+              src="img/intro-bg.jpg"
+              alt="intro background"
+              title="intro background"
+              class="intro-img"
+            />
+            <img
+              class="intro-creative-logo"
+              src="/img/creative-logo.png"
+              alt="Cesis Creative Logo"
+              title="Cesis Creative Logo"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- intro video section -->
+      <section id="secondary-intro" class="secondary-intro">
+        <div class="secondary-intro-video secondary-intro-grid">
+          <div class="secondary-intro-media">
+            <video title="secondary intro video" class="video-js vjs-big-play-centered" controls data-setup="{}" id="who_iam" >
+              <source src="img/secondary-intro-video.mp4" type="video/mp4" />
+              Your browser does not support html video
+            </video>
+          </div>
+          <div class="secondary-intro-content">
+            <h2>Who I am?</h2>
+            <p>
+              I build identities and experiences to elevate& empower
+              organizations.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reprehenderit eum magnam cum alias mollitia iure hic iste
+              perferendis inventore eligendi nam aperiam ratione, consequuntur
+              necessitatibus assumenda aut eos blanditiis explicabo!
+            </p>
+            <a href="#" class="btn btn-dark mt-2">about me</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- gallery image filter -->
+      <section id="filter-gallery" class="filter-gallery mt-2 mb-2">
+        <nav class="filter-navigation-bar">
+          <ul class="button-group filter-button-group filter-nav">
+            <li class="filter-item">
+              <button data-filter="*" class="btn btn-filter active">All</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter=".application" class="btn btn-filter">
+                Application
+              </button>
+            </li>
+            <li class="filter-item">
+              <button data-filter=".web-design" class="btn btn-filter">
+                Web design
+              </button>
+            </li>
+            <li class="filter-item">
+              <button data-filter=".interaction" class="btn btn-filter">
+                Interaction
+              </button>
+            </li>
+            <li class="filter-item">
+              <button data-filter=".photography" class="btn btn-filter">
+                Photography
+              </button>
+            </li>
+            <li class="filter-item">
+              <button data-filter=".branding" class="btn btn-filter">
+                branding
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <div id="gallery-items" class="grid gallery-items mt-2">
+          <!-- item 1 -->
+          <div class="gutter-sizer"></div>
+          <figure class="grid-item grid-item--height2 photography">
+            <div class="gallery-overlay"></div>
+            <img
+              src="img/gallery-item1.jpg"
+              alt="gallery item1"
+              title="gallery item1"
+            />
+            <figcaption>
+              <hgroup>
+                <h4>Photography</h4>
+                <h3>Canonn Microless Pack</h3>
+              </hgroup>
+            </figcaption>
+          </figure>
+
+          <!-- item 2 -->
+          <figure class="grid-item branding">
+            <div class="gallery-overlay"></div>
+            <img
+              src="img/gallery-item2.jpg"
+              alt="gallery item1"
+              title="gallery item1"
+            />
+            <figcaption>
+              <hgroup>
+                <h4>Branding</h4>
+                <h3>North Oxford Logo Design</h3>
+              </hgroup>
+            </figcaption>
+          </figure>
+          <!-- item 3 -->
+          <figure class="grid-item application">
+            <div class="gallery-overlay"></div>
+            <img
+              src="img/gallery-item3.jpg"
+              alt="gallery item1"
+              title="gallery item1"
+            />
+            <figcaption>
+              <hgroup>
+                <h4>Application</h4>
+                <h3>North Oxford Gymnastic</h3>
+              </hgroup>
+            </figcaption>
+          </figure>
+          <!-- item 4 -->
+          <figure class="grid-item web-design">
+            <div class="gallery-overlay"></div>
+            <img
+              src="img/gallery-item4.jpg"
+              alt="gallery item1"
+              title="gallery item1"
+            />
+            <figcaption>
+              <hgroup>
+                <h4>Web design</h4>
+                <h3>Cesis fashion</h3>
+              </hgroup>
+            </figcaption>
+          </figure>
+          <!-- item 5 -->
+          <figure class="grid-item branding ">
+            <div class="gallery-overlay"></div>
+            <img
+              src="img/gallery-item5.jpg"
+              alt="gallery item1"
+              title="gallery item1"
+            />
+            <figcaption>
+              <hgroup>
+                <h4>Branding</h4>
+                <h3>Drawn Brocher</h3>
+              </hgroup>
+            </figcaption>
+          </figure>
+          <!-- item 6 -->
+          <figure class="grid-item photography grid-item--height2">
+            <div class="gallery-overlay"></div>
+            <img
+              src="img/gallery-item6.jpg"
+              alt="gallery item1"
+              title="gallery item1"
+            />
+            <figcaption>
+              <hgroup>
+                <h4>Photography</h4>
+                <h3>Creative Design</h3>
+              </hgroup>
+            </figcaption>
+          </figure>
+          <!-- item 7 -->
+          <figure class="grid-item interaction">
+            <div class="gallery-overlay"></div>
+            <img
+              src="img/gallery-item7.jpg"
+              alt="gallery item1"
+              title="gallery item1"
+            />
+            <figcaption>
+              <hgroup>
+                <h4>Interaction</h4>
+                <h3>Cesis Fashion</h3>
+              </hgroup>
+            </figcaption>
+          </figure>
+          <!-- item 8 -->
+
+          <figure class="grid-item grid-item--height2 photography">
+            <div class="gallery-overlay"></div>
+            <img
+              src="img/gallery-item8.jpg"
+              alt="gallery item1"
+              title="gallery item1"
+            />
+            <figcaption>
+              <hgroup>
+                <h4>Photography</h4>
+                <h3>Dope Pictures</h3>
+              </hgroup>
+            </figcaption>
+          </figure>
+
+          <!-- item 9 -->
+          <figure class="grid-item application">
+            <div class="gallery-overlay"></div>
+            <img
+              src="img/gallery-item9.jpg"
+              alt="gallery item1"
+              title="gallery item1"
+            />
+            <figcaption>
+              <hgroup>
+                <h4>Application</h4>
+                <h3>UI - UX Courses</h3>
+              </hgroup>
+            </figcaption>
+          </figure>
+        </div>
+        <button id="load-more" class="load-more btn btn-dark mt-1 mb-1">
+          Load More
+        </button>
+      </section>
+
+      <!-- select your plan section -->
+      <section id="select-plan" class="select-plan pt-3 pb-3">
+        <h2 class="s5 c-white">Select you plan</h2>
+        <p class=" s5 mb-2">Creating a website has never been this easy</p>
+        <ul class="plan-list">
+          <!-- personal plan -->
+          <li class=" s5 plan-item c-white">
+            <div class="plan-icon">
+              <img
+                src="img/personal.png"
+                alt="personal plan"
+                title="personal plan"
+              />
+            </div>
+            <h3>Business Project</h3>
+            <ul class="Privileges">
+              <li>Logo Design</li>
+              <li class="not-priv">Brochure Template</li>
+              <li class="not-priv">WordPress Development</li>
+              <li class="not-priv">Behance Presentation</li>
+              <li>Dribbble Shots</li>
+              <li>2 Revisions</li>
+              <li>Support via Email</li>
+            </ul>
+            <a href="#" class="btn btn-purple mt-1"
+              >from 99<abbr title="dollar">$</abbr></a
+            >
+          </li>
+          <!-- business plan -->
+          <li class=" s5 plan-item c-white">
+            <div class="plan-icon">
+              <img
+                src="img/business.png"
+                alt="personal plan"
+                title="personal plan"
+              />
+            </div>
+            <h3>Business Project</h3>
+            <ul class="Privileges">
+              <li>Logo Design</li>
+              <li class="not-priv">Brochure Template</li>
+              <li class="not-priv">WordPress Development</li>
+              <li class="not-priv">Behance Presentation</li>
+              <li>Dribbble Shots</li>
+              <li>3 Revisions</li>
+              <li>Live chat support</li>
+            </ul>
+            <a href="#" class="btn btn-purple mt-1"
+              >from 199<abbr title="dollar">$</abbr></a
+            >
+          </li>
+          <!-- exclusive plan -->
+          <li class=" s5 plan-item c-white">
+            <div class="plan-icon">
+              <img
+                src="img/business.png"
+                alt="exclusive plan"
+                title="personal plan"
+              />
+            </div>
+            <h3>Exclusive Project</h3>
+            <ul class="Privileges">
+              <li>Logo Design</li>
+              <li>Brochure Template</li>
+              <li>WordPress Development</li>
+              <li>Behance Presentation</li>
+              <li>Dribbble Shots</li>
+              <li>6 Revisions</li>
+              <li>live chat support</li>
+            </ul>
+            <a href="#" class="btn btn-purple mt-1"
+              >from 200<abbr title="dollar">$</abbr></a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <!-- about me section -->
+      <section id="get-intouch" class="get-intouch pb-3 pt-3">
+        <div class="container-level2">
+          <header class="s6 getInTouch-header">
+            <!-- logo -->
+            <img
+              src="img/get-intouch-logo.png"
+              alt="your logo name here"
+              title="your logo name here"
+            />
+            <!-- heading -->
+            <div class="headings text-right">
+              <h2 class="c-primary">Let's make somthing great together</h2>
+              <p>
+                I build identities and experiences to elevate & empower
+                organizations.
+              </p>
+            </div>
+          </header>
+        </div>
+        <!-- content -->
+        <article>
+          <!-- Swiper -->
+          <div class="container">
+            <div class="s6 swiper-container git-pics-slider mt-1 mb-1">
+              <div class="swiper-wrapper git-pics-wrapper">
+                <div class="swiper-slide git-slider-item">
+                  <img
+                    src="img/getInTouch-slider-pic1.jpg"
+                    alt="project 1"
+                    title="project 1"
+                    class="git-slider-pic1"
+                  />
+                </div>
+                <div class="swiper-slide git-slider-item">
+                  <img
+                    src="img/getInTouch-slider-pic2.jpg"
+                    alt="project 2"
+                    title="project 2"
+                    class="git-slider-pic2"
+                  />
+                </div>
+                <div class="swiper-slide git-slider-item">
+                  <img
+                    src="img/getInTouch-slider-pic3.jpg"
+                    alt="project 3"
+                    title="project 3"
+                    class="git-slider-pic3"
+                  />
+                </div>
+              </div>
+              <!-- Add Arrows -->
+              <div class="next-prev-buttons">
+                <div class="swiper-button-prev">
+                  <button class="btn next-button">
+                    <i class="fas fa-chevron-left"></i>
+                  </button>
+                </div>
+                <div class="swiper-button-next">
+                  <button class="btn prev-button">
+                    <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--discovering nav-->
+          <div class="container-level2">
+            <div class="s6 discover-us text-center">
+              <div class="discover-description">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Cupiditate voluptates et unde ex, sunt excepturi doloremque.
+                  Placeat eos dignissimos necessitatibus.
+                </p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Incidunt aperiam similique delectus nam, asperiores enim
+                  quibusdam corporis fugit sed, debitis possimus. Rem quibusdam
+                  magnam corrupti mollitia nulla enim soluta quas labore error
+                  voluptates beatae quam, dolorum quod provident adipisci
+                  distinctio.
+                </p>
+              </div>
+              <ul class="discover-list mt-2">
+                <li class="discover-link t-uppercase">
+                  <a href="#" id="workTogether">Work together</a>
+                </li>
+                <li class="discover-link t-uppercase">
+                  <a href="#" id="myServices">My services</a>
+                </li>
+                <li class="discover-link t-uppercase">
+                  <a href="#" id="getInTouch">Get in touch</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- testimonials section -->
+
+      <section class="testimonials text-center" id="testimonials">
+        <article>
+            <header>
+              <h2 class="s7 c-primary">Testimonials</h2>
+              <h4 class="s7 c-gray pb-2">
+                Why Cesis is one of the best WordPress Theme on
+                <span class="d-block"></span>
+                  ThemeForest. Let’s ask our customers.</span
+                >
+              </h4>
+            </header>
+            <!-- testimonials slider -->
+            <div class="container-level2">
+              <div class="swiper-container pt-2 pb-2 testimonials-slider">
+                <div class="swiper-wrapper testimonials-wrapper">
+                  <div class="s7 swiper-slide testimonial-slider">
+                    <a href="#">
+                      <article class="testimonial-item">
+                        <header>
+                          <div class="testimo-member-avatar">
+                            <img
+                              src="img/testimonial1.jpg"
+                              alt="member avatar"
+                              title="member avatar"
+                            />
+                          </div>
+                        </header>
+                        <p class="comment">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                          Culpa, iusto? Explicabo magnam quis provident at neque
+                          minima distinctio.
+                        </p>
+                        <footer>
+                          <hgroup>
+                            <h4 class="fw-b c-primary">Sam Isbister</h4>
+                            <h5 class="c-gray">Mass Impressions</h5>
+                          </hgroup>
+                        </footer>
+                      </article>
+                    </a>
+                  </div>
+                  <div class="s7 swiper-slide">
+                    <a href="#">
+                      <article class="testimonial-item">
+                        <header>
+                          <div class="testimo-member-avatar">
+                            <img
+                              src="img/testimonial3.jpg"
+                              alt="member avatar"
+                              title="member avatar"
+                            />
+                          </div>
+                        </header>
+                        <p class="comment">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                          Culpa, iusto? Explicabo magnam quis provident at neque
+                          minima distinctio.
+                        </p>
+                        <footer>
+                          <hgroup>
+                            <h4 class="fw-b c-primary">Sam Isbister</h4>
+                            <h5 class="c-gray">Mass Impressions</h5>
+                          </hgroup>
+                        </footer>
+                      </article>
+                    </a>
+                  </div>
+                  <div class="s7 swiper-slide">
+                    <a href="#">
+                      <article class="testimonial-item">
+                        <header>
+                          <div class="testimo-member-avatar">
+                            <img
+                              src="img/testimonial2.jpg"
+                              alt="member avatar"
+                              title="member avatar"
+                            />
+                          </div>
+                        </header>
+                        <p class="comment">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                          Culpa, iusto? Explicabo magnam quis provident at neque
+                          minima distinctio.
+                        </p>
+                        <footer>
+                          <hgroup>
+                            <h4 class="fw-b c-primary">Sam Isbister</h4>
+                            <h5 class="c-gray">Mass Impressions</h5>
+                          </hgroup>
+                        </footer>
+                      </article>
+                    </a>
+                  </div>
+                  <div class="s7 swiper-slide">
+                    <a href="#">
+                      <article class="testimonial-item">
+                        <header>
+                          <div class="testimo-member-avatar">
+                            <img
+                              src="img/testimonial3.jpg"
+                              alt="member avatar"
+                              title="member avatar"
+                            />
+                          </div>
+                        </header>
+                        <p class="comment">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                          Culpa, iusto? Explicabo magnam quis provident at neque
+                          minima distinctio.
+                        </p>
+                        <footer>
+                          <hgroup>
+                            <h4 class="fw-b c-primary">Sam Isbister</h4>
+                            <h5 class="c-gray">Mass Impressions</h5>
+                          </hgroup>
+                        </footer>
+                      </article>
+                    </a>
+                  </div>
+                </div>
+                <!-- Add Pagination -->
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </article>
+      </section>
+
+      <!-- Partners section -->
+      <section id="partner-logos" class="partner-logos pt-3 pb-3">
+        <div class="container-level2">
+          <div class="p-logos-grid">
+            <div class="s8 p-logo1">
+              <img src="img/p-logo1.png" alt="partener logo desc" title="partner logo name">
+            </div>
+            <div class="s8 p-logo2">
+              <img src="img/p-logo2.png" alt="partener logo desc" title="partner logo name">
+            </div>
+            <div class="s8 p-logo3">
+              <img src="img/p-logo3.png" alt="partener logo desc" title="partner logo name">
+            </div>
+            <div class="s8 p-logo4">
+              <img src="img/p-logo4.png" alt="partener logo desc" title="partner logo name">
+            </div>
+            <div class="s8 p-logo5">
+              <img src="img/p-logo5.png" alt="partener logo desc" title="partner logo name">
+            </div>
+            <div class="s8 p-logo6">
+              <img src="img/p-logo6.png" alt="partener logo desc" title="partner logo name">
+            </div>
+            <div class="s8 p-logo7">
+              <img src="img/p-logo7.png" alt="partener logo desc" title="partner logo name">
+            </div>
+            <div class="s8 p-logo8">
+              <img src="img/p-logo8.png" alt="partener logo desc" title="partner logo name">
+            </div>
+            <div class="s8 p-logo9">
+              <img src="img/p-logo9.png" alt="partener logo desc" title="partner logo name">
+            </div>
+            <div class="s8 p-logo10">
+              <img src="img/p-logo10.png" alt="partener logo desc" title="partner logo name">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- blog section -->
+      <section id="blog" class="blog">
+        <div class="blog-grid">
+          <!-- blog grid 1 -->
+          <div class="s9 grid-1">
+            <figure>
+              <img srcset="
+              img/blog-pic3-4x.jpg 4x,
+              img/blog-pic3-3x.jpg 3x,
+              img/blog-pic3-2x.jpg 2x,
+              img/blog-pic3-1x.jpg 1x" 
+              src="img/blog-pic3.jpg" 
+              alt="blog category desc" 
+              class="d-block"
+              title="blog category name">
+              <figcaption>
+                <div class="description">
+                  <div class="time-writer">
+                    <time datetime="2017-04-10"><abbr title="april">Apr</abbr> 10 ,  2017</time> <h5 class="fw-l c-white d-inlin-block">/ Jon Doe</h5>
+                  </div>
+                  <h3>How to improve your website in 1 month</h3>
+                  <p class="pt-0">Really nice theme, and its so good to work with. Also the customer support is very good and has fast reply and the theme often get updates.</p>
+                  <a href="" class="btn btn-white">Read More</a>
+                </div>
+                <div class="category">
+                  <h4>Featured Post</h4>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+          <!-- blog grid 2 -->
+          <div class="s9 grid-2">
+            <figure>
+              <img srcset="
+              img/blog-pic2-4x.jpg 4x,
+              img/blog-pic2-3x.jpg 3x,
+              img/blog-pic2-2x.jpg 2x,
+              img/blog-pic2-2x.jpg 1x" 
+              src="img/blog-pic2.jpg" 
+              alt="blog category desc" 
+              class="d-block"
+              title="blog category name">
+              <figcaption>
+                <div class="description">
+                  <div class="time-writer">
+                    <time datetime="2017-04-10"><abbr title="april">Apr</abbr> 10 ,  2017</time> <h5 class="fw-l c-white d-inlin-block">/ Jon Doe</h5>
+                  </div>
+                  <h3>How to improve your website in 1 month</h3>
+                  <p class="pt-0">Really nice theme, and its so good to work with. Also the customer support is very good and has fast reply and the theme often get updates.</p>
+                  <a href="" class="btn btn-white">Read More</a>
+                </div>
+                <div class="category">
+                  <h4>Tips & Tricks</h4>
+                </div>
+              </figcaption>
+            </figure>
+          </div>
+          <!-- blog grid 3 -->
+          <div class="s9 grid-3">
+            <div class="description text-center p-2">
+              <h2 class="c-primary">NEWS</h2>
+              <p class="pt-1 pb-1">I build identities and experiences to elevate & empower organizations.</p>
+              <a href="" class="btn btn-dark">All Articles</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- call to action section -->
+      <section id="cta" class="cta">
+        <div class="cta-content text-center c-white p-2">
+          <h2 class="s10">Let's make your <span class="d-block">website great&nbsp;again</span></h2>
+          <p class="s10 pt-1 pb-1">Creating a website has never been this easy with Cesis Theme</p>
+          <a href="" class="s10 btn btn-white">Buy Cesis</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer section -->
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="flexed pt-5 pb-5">
+          <div class="s11 flex-left">
+            <figure>
+              <img src="img/footer-logo.png" alt="footer logo" title="footer logo">
+              <figcaption>
+                <h3>Cesis Creative</h3>
+              </figcaption>
+            </figure>
+            <p class="pt-1 pb-1">© 2015 - 2017 Tranmautritam Team. Cesis Creative demo for Cesis WordPress Theme.</p>
+            <nav class="mb-1">
+              <ul>
+                <li>
+                  <a href="#">Twitter</a>&nbsp;
+                  <span aria-hidden="true">.</span>
+                </li>
+                <li>
+                  <a href="#">Instagram</a>&nbsp;
+                  <span aria-hidden="true">.</span>
+                </li>
+                <li>
+                  <a href="#">Dribbble</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="s11 flex-right">
+            <h4 class="fw-m c-primary">Subscribe Newsletter</h4>
+            <div class="form-container subscribe-form mt-1 mb-2">
+              <div class="labeled-input">
+                <label for="subscribe-input" class="subscribe-label">Enter your email</label>
+                <input type="text" id="subscribe-input">
+              </div>
+              <a href="#" class="c-primary"><i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- javascript links -->
+    <script src="js/jquery-3.5.1.min.js" defer></script>
+    <script src="js/isotope.pkgd.min.js" defer></script>
+    <script src="js/packery-mode.pkgd.min.js" defer></script>
+    <script src="js/swiper-bundle.min.js" defer></script>
+    <script src="js/smooth-scroll.polyfills.min.js" defer></script>
+    <script src="js/gsap.min.js" defer></script>
+    <script src="js/ScrollTrigger.min.js" defer></script>
+    <script src="/node_modules/video.js/dist/video.min.js" ></script>
+    <script src="js/main.js" defer ></script>
+    
+  </body>
+</html>

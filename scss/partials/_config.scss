@@ -1,0 +1,92 @@
+
+// Set Container
+
+@mixin container($padding) {
+    margin: 0 auto;
+    padding: $padding;
+    max-width: 1200px;
+}
+
+//set the content centerd horizontally an virtically
+
+@mixin center-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+// Set bazier transaction
+
+@mixin bazier-transition {
+    -webkit-transition: 0.5s cubic-bezier(0.65,-0.03, 0, 1.01);
+    -o-transition: 0.5s cubic-bezier(0.65,-0.03, 0, 1.01);
+    -moz-transition: 0.5s cubic-bezier(0.65,-0.03, 0, 1.01);
+    transition: 0.5s cubic-bezier(0.65,-0.03, 0, 1.01);
+}
+
+// Make the img fit the parent div
+
+@mixin img-fit {
+    width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+}
+
+// Set bg with overlay
+
+@mixin  set-bg($url,$rgba1,$rgba2,$attach) {
+    background: linear-gradient($rgba1,$rgba2),url($url);
+    background-position: center;
+    background-attachment: $attach;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+// Screen sizes
+
+@mixin  mediaMd {
+    @media screen and (max-width:768px)
+    {
+        @content;
+    }
+}
+
+@mixin  mediaLg {
+    @media screen and (min-width:768px) and (max-width:1170px)
+    {
+        @content;
+    }
+}
+
+@mixin  mediaXLg {
+    @media screen and (min-width:1171px)
+    {
+        @content;
+    }
+}
+
+//Set text color depending on background
+
+@function text-color($color)
+{
+    @if(lightness($color)>50) {
+
+        @return $primary-color;
+        
+    }
+    @else
+    {
+        @return #ffffff;
+    }
+}

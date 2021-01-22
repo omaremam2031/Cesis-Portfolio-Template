@@ -1,0 +1,278 @@
+
+.contact-grid1
+{
+  text-align: center !important;
+}
+
+.divider
+{
+  width: 100%;
+  height: 1px;
+  background: #cccccc;
+  margin: 2rem 0;
+}
+
+.address
+{
+  li
+  {
+    margin-bottom: 1rem;
+    h3{
+      font-weight: $fw-m;
+      color: $primary-color;
+    }
+    a{
+      display: block;
+      margin-top: 1rem;
+      color: $gray;
+      &:hover{
+        color: $primary-color;
+        font-weight: $fw-m;
+      }
+    }
+  }
+
+}
+
+
+
+.map-section
+{
+  position: relative;
+  width:100%;
+  height: 400px;
+
+  #map{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;  
+  }
+}
+
+.contact-social-media
+{ 
+  @supports(display: grid)
+  {
+    .socail-media
+    {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .socail-media
+  {
+    background: linear-gradient(135deg, rgba(143,217,250,1) 0%, rgba(120,88,254,1) 100%);
+    .sm-grid
+    {
+      height: 120px;
+      max-height: 120px;
+      border-right: 1px solid rgb(201, 191, 191);
+      position: relative;
+      overflow: hidden;
+
+      a{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        @include bazier-transition;
+      }
+
+      .social-media-label
+      {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 150px;
+        transform: translate(-50%,-50%);
+        @include bazier-transition;
+        font-size: 0.7rem;
+        text-align: center;
+      }
+
+      &:hover
+      {
+        .social-media-label
+        {
+          top: 100px;
+        }
+        a{
+          top: 30%;
+        }
+      }
+    }
+  }
+}
+
+/*---------------------------Wide screens-------------------------------*/
+
+@include mediaLg
+{
+  @supports(display: grid)
+  {
+    .contact-grid
+    {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .contact-grid
+  {
+    display: flex;
+  }
+  
+  .contact-grid1
+  {
+    text-align: left !important;
+    padding-right: 5rem;
+    flex-basis: 50%;
+    flex-grow: 1;
+    span{ 
+      position: relative;
+      padding-left: 1rem ;
+      &::before
+      {
+        content: "";
+        background: $secondary-color;
+        width: 2.5px;
+        height: 15px;
+        position: absolute;
+        top: 18%;
+        left: 0;
+      }
+    }
+  }
+  .contact-form-grid2
+  {
+    padding-left: 5rem;
+    flex-basis: 50%;
+    flex-grow: 1;
+  }
+
+  .address{
+
+    ul{
+      display: flex;
+      li{
+        flex-basis: 33.333%;
+        padding-right: 3rem;
+      }
+    }
+    
+  }
+
+  .contact-social-media
+  { 
+    @supports(display: grid)
+    {
+      .socail-media
+      {
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+      }
+    }
+
+    .socail-media
+    {
+      display: flex;
+      .sm-grid
+      {
+        width: 16.666%;
+        max-width: 16.666%;
+      }
+    }
+  }
+  
+}
+
+@include mediaXLg
+{
+  @supports(display: grid)
+  {
+    .contact-grid
+    {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .contact-grid
+  {
+    display: flex;
+  }
+  
+  .contact-grid1
+  {
+    text-align: left !important;
+    padding-right: 5rem;
+    flex-basis: 50%;
+    flex-grow: 1;
+    span{ 
+      position: relative;
+      padding-left: 1rem ;
+      &::before
+      {
+        content: "";
+        background: $secondary-color;
+        width: 2.5px;
+        height: 15px;
+        position: absolute;
+        top: 18%;
+        left: 0;
+      }
+    }
+  }
+  .contact-form-grid2
+  {
+    padding-left: 5rem;
+    flex-basis: 50%;
+    flex-grow: 1;
+  }
+
+  .address{
+
+    ul{
+      display: flex;
+      li{
+        flex-basis: 33.333%;
+        padding-right: 3rem;
+      }
+    }
+    
+  }
+
+  .contact-social-media
+  { 
+    @supports(display: grid)
+    {
+      .socail-media
+      {
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+      }
+    }
+
+    .socail-media
+    {
+      display: flex;
+      .sm-grid
+      {
+        width: 16.666%;
+        max-width: 16.666%;
+      }
+    }
+  }
+
+
+}
